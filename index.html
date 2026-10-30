@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#103d32" />
+    <meta
+      name="description"
+      content="Young Kuteb Innovators (YKI) is an independent, youth-led, digital-first initiative being developed to help young people learn, connect, create, and build solutions for their communities."
+    />
+    <title>Young Kuteb Innovators | Our Heritage. Our Ideas. Our Future.</title>
+    <style>
+      :root {
+        --green: #103d32;
+        --green2: #0d4a3a;
+        --gold: #d6a52e;
+        --cream: #f7f4ea;
+        --sage: #e5f0e6;
+        --ink: #20312b;
+        --muted: #5e6e66;
+        --white: #fff;
+        --line: #dce5de;
+        --shadow: 0 18px 48px rgba(16, 61, 50, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: var(--ink);
+        background: #fff;
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        width: min(1120px, 92%);
+        margin-inline: auto;
+      }
+      .topbar {
+        background: var(--green);
+        color: #fff;
+        font-size: 0.86rem;
+        padding: 8px 0;
+      }
+      .topbar .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 78px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        font-weight: 850;
+        color: var(--green);
+        letter-spacing: 0.01em;
+      }
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        background: var(--green);
+        color: var(--gold);
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        font-weight: 900;
+        font-size: 1.15rem;
+        box-shadow: inset 0 0 0 2px var(--gold);
+      }
+      .brand small {
+        display: block;
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        font-size: 0.68rem;
+      }
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+      .navlinks a {
+        text-decoration: none;
+        font-size: 0.92rem;
+        font-weight: 650;
+      }
+      .navlinks a:hover {
+        color: var(--green2);
+      }
+      .menu-btn {
+        display: none;
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 10px;
+        padding: 9px 12px;
+        font-size: 1rem;
+      }
+      .hero {
+        background:
+          radial-gradient(
+            circle at 90% 20%,
+            rgba(214, 165, 46, 0.16),
+            transparent 27%
+          ),
+          linear-gradient(135deg, var(--cream), #fff 65%);
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        align-items: center;
+        gap: 48px;
+        padding: 76px 0 78px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid #cbded0;
+        background: #fff;
+        border-radius: 99px;
+        padding: 7px 12px;
+        color: var(--green);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+      h1 {
+        font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+        line-height: 1.04;
+        letter-spacing: -0.055em;
+        color: var(--green);
+        margin: 22px 0 18px;
+      }
+      h1 em {
+        font-style: normal;
+        color: #b88713;
+      }
+      .lead {
+        font-size: 1.13rem;
+        color: #46574f;
+        max-width: 650px;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 28px 0 18px;
+      }
+      .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        border-radius: 12px;
+        padding: 13px 18px;
+        font-weight: 800;
+        border: 1px solid var(--green);
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+      .btn.primary {
+        background: var(--green);
+        color: #fff;
+      }
+      .btn.secondary {
+        background: #fff;
+        color: var(--green);
+      }
+      .note {
+        font-size: 0.84rem;
+        color: var(--muted);
+      }
+      .hero-card {
+        background: var(--green);
+        border-radius: 28px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+      .hero-card:before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border: 1px solid rgba(214, 165, 46, 0.5);
+        border-radius: 20px;
+        pointer-events: none;
+      }
+      .hero-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+        position: relative;
+      }
+      .hero-caption {
+        color: #f6e7b4;
+        text-align: center;
+        font-weight: 750;
+        padding: 14px 8px 4px;
+        position: relative;
+      }
+      section {
+        padding: 76px 0;
+      }
+      .section-head {
+        max-width: 730px;
+        margin-bottom: 32px;
+      }
+      .kicker {
+        color: #a77a0b;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.76rem;
+        font-weight: 900;
+      }
+      h2 {
+        font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+        line-height: 1.14;
+        letter-spacing: -0.035em;
+        color: var(--green);
+        margin: 9px 0 14px;
+      }
+      h3 {
+        color: var(--green);
+        font-size: 1.13rem;
+        line-height: 1.3;
+        margin: 0 0 9px;
+      }
+      p {
+        margin: 0 0 12px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .identity {
+        background: #fff;
+      }
+      .identity-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+      .identity-card {
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: #fff;
+      }
+      .identity-card.highlight {
+        background: var(--sage);
+        border-color: var(--sage);
+      }
+      .identity-card p {
+        font-size: 1.04rem;
+      }
+      .values {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 22px;
+      }
+      .pill {
+        background: var(--cream);
+        border: 1px solid #eadfbf;
+        border-radius: 99px;
+        padding: 7px 11px;
+        font-size: 0.82rem;
+        font-weight: 750;
+        color: var(--green);
+      }
+      .programmes {
+        background: var(--cream);
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e7e6da;
+        border-radius: 18px;
+        padding: 23px;
+        box-shadow: 0 6px 20px rgba(16, 61, 50, 0.035);
+      }
+      .icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        background: var(--sage);
+        display: grid;
+        place-items: center;
+        font-size: 1.35rem;
+        margin-bottom: 18px;
+      }
+      .card p {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+      .tag {
+        font-size: 0.75rem;
+        font-weight: 850;
+        color: #956d08;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
+      .heritage-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 42px;
+        align-items: start;
+      }
+      .heritage-panel {
+        background: var(--green);
+        color: #fff;
+        border-radius: 22px;
+        padding: 30px;
+      }
+      .heritage-panel h3 {
+        color: #f6e7b4;
+      }
+      .heritage-panel p {
+        color: #e1ece5;
+      }
+      .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0 0;
+      }
+      .checklist li {
+        padding: 11px 0 11px 30px;
+        position: relative;
+        border-bottom: 1px solid var(--line);
+      }
+      .checklist li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        color: #a77a0b;
+        font-weight: 900;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        counter-reset: step;
+      }
+      .step {
+        border-top: 4px solid var(--gold);
+        padding: 20px;
+        background: #fff;
+        border-radius: 0 0 16px 16px;
+        box-shadow: var(--shadow);
+      }
+      .step-no {
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        font-weight: 900;
+        color: #a77a0b;
+      }
+      .join {
+        background: linear-gradient(130deg, var(--green), #092c25);
+        color: #fff;
+      }
+      .join h2 {
+        color: #fff;
+      }
+      .join .section-head p {
+        color: #dce9e1;
+      }
+      .join-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+        align-items: start;
+      }
+      .join-options {
+        display: grid;
+        gap: 12px;
+      }
+      .join-option {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 14px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.055);
+      }
+      .join-option strong {
+        display: block;
+        color: #f6e7b4;
+        margin-bottom: 4px;
+      }
+      .join-option span {
+        font-size: 0.92rem;
+        color: #e1ece5;
+      }
+      .contact-box {
+        background: #fff;
+        color: var(--ink);
+        border-radius: 20px;
+        padding: 25px;
+      }
+      .contact-box h3 {
+        font-size: 1.35rem;
+      }
+      .contact-box .muted {
+        font-size: 0.9rem;
+      }
+      .contact-box a {
+        overflow-wrap: anywhere;
+      }
+      .notice {
+        font-size: 0.83rem;
+        color: var(--muted);
+        background: var(--cream);
+        border-radius: 10px;
+        padding: 12px;
+        margin-top: 16px;
+      }
+      footer {
+        background: #08271f;
+        color: #dce9e1;
+        padding: 30px 0;
+      }
+      .footer-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      footer strong {
+        color: #fff;
+      }
+      footer small {
+        color: #b7c9bf;
+      }
+
+      .volunteer-form {
+        display: grid;
+        gap: 13px;
+        margin-top: 18px;
+      }
+      .volunteer-form > label {
+        display: grid;
+        gap: 6px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--green);
+      }
+      .volunteer-form input:not([type="checkbox"]),
+      .volunteer-form select,
+      .volunteer-form textarea {
+        width: 100%;
+        border: 1px solid #cfdcd3;
+        border-radius: 9px;
+        padding: 11px 12px;
+        font: inherit;
+        color: var(--ink);
+        background: #fff;
+      }
+      .volunteer-form input:focus,
+      .volunteer-form select:focus,
+      .volunteer-form textarea:focus {
+        outline: 2px solid var(--gold);
+        outline-offset: 1px;
+      }
+      .volunteer-form fieldset {
+        border: 1px solid #dce5de;
+        border-radius: 12px;
+        padding: 12px;
+        display: grid;
+        gap: 8px;
+      }
+      .volunteer-form legend {
+        font-weight: 800;
+        color: var(--green);
+        padding: 0 5px;
+      }
+      .volunteer-form legend span {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--muted);
+      }
+      .volunteer-form .choice {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        font-size: 0.87rem;
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .volunteer-form input[type="checkbox"] {
+        margin-top: 4px;
+        accent-color: var(--green);
+      }
+      .volunteer-form .consent {
+        background: var(--cream);
+        padding: 12px;
+        border-radius: 10px;
+      }
+      .volunteer-form .btn {
+        cursor: pointer;
+        font: inherit;
+      }
+      .form-status {
+        font-size: 0.83rem;
+        color: var(--muted);
+        margin: 0;
+      }
+      @media (max-width: 850px) {
+        .hero-grid,
+        .heritage-grid,
+        .join-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-grid {
+          padding: 52px 0;
+          gap: 32px;
+        }
+        .hero-card {
+          max-width: 520px;
+        }
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        .navlinks {
+          display: none;
+          position: absolute;
+          top: 78px;
+          left: 0;
+          right: 0;
+          background: #fff;
+          padding: 18px 4%;
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
+        .navlinks.open {
+          display: flex;
+        }
+        .menu-btn {
+          display: block;
+        }
+      }
+      @media (max-width: 560px) {
+        section {
+          padding: 54px 0;
+        }
+        .cards,
+        .identity-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-grid {
+          padding: 42px 0;
+        }
+        .hero-card {
+          padding: 12px;
+        }
+        .brand {
+          font-size: 0.9rem;
+        }
+        .brand-mark {
+          width: 40px;
+          height: 40px;
+        }
+        .topbar .wrap {
+          font-size: 0.76rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="wrap">
+        <span>Independent • Youth-led • Digital-first</span
+        ><span>Building skills, ideas and opportunity</span>
+      </div>
+    </div>
+    <header>
+      <nav class="wrap" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Young Kuteb Innovators home">
+          <span class="brand-mark">YKI</span>
+          <span
+            >YOUNG KUTEB INNOVATORS<small
+              >OUR HERITAGE. OUR IDEAS. OUR FUTURE.</small
+            ></span
+          >
+        </a>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-expanded="false"
+          aria-controls="navlinks"
+        >
+          Menu ☰
+        </button>
+        <div class="navlinks" id="navlinks">
+          <a href="#about">About</a><a href="#programmes">Programmes</a
+          ><a href="#heritage">Heritage</a><a href="#roadmap">Our approach</a
+          ><a href="#join">Get involved</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="eyebrow"
+              ><span class="dot"></span> A new generation of possibility</span
+            >
+            <h1>Our heritage.<br /><em>Our ideas.</em><br />Our future.</h1>
+            <p class="lead">
+              Young Kuteb Innovators (YKI) is an independent, youth-led
+              initiative in development, built to help young people learn
+              practical digital skills, connect with mentors, turn ideas into
+              solutions, and create opportunities for their communities.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="#join"
+                >Get involved <span aria-hidden="true">→</span></a
+              >
+              <a class="btn secondary" href="#programmes"
+                >Explore our programmes</a
+              >
+            </div>
+            <p class="note">
+              Starting digital-first, with a community-rooted vision and room to
+              grow.
+            </p>
+          </div>
+          <div class="hero-card">
+            <img
+              src="assets/yki-logo-concept.png"
+              alt="Preliminary Young Kuteb Innovators logo concept in green and gold"
+            />
+            <div class="hero-caption">Learn. Build. Preserve. Empower.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="identity" id="about">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">Who we are</span>
+            <h2>Local roots. Wider possibilities.</h2>
+            <p class="muted">
+              YKI aims to connect young people to the knowledge, tools,
+              relationships, and opportunities they need to create a better
+              future. We are beginning with a practical pilot and building
+              through listening, collaboration, and measurable action.
+            </p>
+          </div>
+          <div class="identity-grid">
+            <article class="identity-card highlight">
+              <div class="tag">Our vision</div>
+              <h3>A generation empowered to transform communities</h3>
+              <p>
+                To raise a generation of empowered Kuteb and other participating
+                young people who use innovation, technology, entrepreneurship,
+                and creativity to transform their communities and contribute to
+                the world.
+              </p>
+            </article>
+            <article class="identity-card">
+              <div class="tag">Our mission</div>
+              <h3>Skills, mentorship and ideas that become solutions</h3>
+              <p>
+                To equip young people with practical digital skills, mentorship,
+                entrepreneurial opportunities, and an inclusive innovation
+                ecosystem that transforms local ideas into sustainable solutions
+                while preserving and celebrating Kuteb cultural heritage.
+              </p>
+            </article>
+          </div>
+          <div class="values" aria-label="Core values">
+            <span class="pill">Innovation</span
+            ><span class="pill">Integrity</span
+            ><span class="pill">Cultural pride</span
+            ><span class="pill">Inclusion</span
+            ><span class="pill">Collaboration</span
+            ><span class="pill">Self-reliance</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="programmes" id="programmes">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">What we want to do</span>
+            <h2>Six pathways from learning to impact.</h2>
+            <p class="muted">
+              These are proposed programmes. We will begin with a manageable
+              pilot and expand as our team, resources, and partnerships grow.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="icon">⌘</div>
+              <div class="tag">01 / Learn</div>
+              <h3>YKI Digital Academy</h3>
+              <p>
+                Accessible learning in digital literacy, AI tools, coding,
+                design, websites, video editing, digital marketing and online
+                work readiness.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon">✦</div>
+              <div class="tag">02 / Solve</div>
+              <h3>YKI Ideas to Impact</h3>
+              <p>
+                Help young people identify real community challenges, research
+                needs, test ideas and present useful prototypes.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon">↗</div>
+              <div class="tag">03 / Build</div>
+              <h3>YKI Startup Studio</h3>
+              <p>
+                Support aspiring founders to understand customers, test business
+                ideas, build simple products and prepare for opportunities.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon">◈</div>
+              <div class="tag">04 / Preserve</div>
+              <h3>YKI Digital Heritage</h3>
+              <p>
+                Work with community custodians to document approved Kuteb
+                language materials, oral histories, stories, music and cultural
+                expressions.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon">◎</div>
+              <div class="tag">05 / Connect</div>
+              <h3>YKI Connect</h3>
+              <p>
+                Connect participants with mentors, professionals, verified
+                opportunities, internships, learning resources and peers.
+              </p>
+            </article>
+            <article class="card">
+              <div class="icon">⌂</div>
+              <div class="tag">06 / Contribute</div>
+              <h3>YKI Community Solutions</h3>
+              <p>
+                Support youth teams to design practical, affordable solutions
+                for schools, farmers, local businesses and community
+                organisations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="heritage">
+        <div class="wrap heritage-grid">
+          <div class="section-head">
+            <span class="kicker">Culture with care</span>
+            <h2>Innovation that honours our heritage.</h2>
+            <p class="muted">
+              Kuteb identity is an important inspiration for YKI. We want
+              cultural preservation to be community-led, respectful and useful
+              to future generations—not something collected or published without
+              permission.
+            </p>
+          </div>
+          <div class="heritage-panel">
+            <h3>Our heritage principles</h3>
+            <p>
+              We will listen, consult, give credit, protect sensitive knowledge,
+              and make room for different accounts and perspectives.
+            </p>
+            <ul class="checklist">
+              <li>Seek informed consent before recording or publishing.</li>
+              <li>
+                Respect knowledge that should remain private or restricted.
+              </li>
+              <li>Agree on attribution, permissions and reuse.</li>
+              <li>
+                Work with elders, artists, historians, linguists and youth.
+              </li>
+              <li>
+                Use culture to inspire creativity, learning and community
+                benefit.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section style="background: #f7f4ea" id="roadmap">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">Start small. Learn fast.</span>
+            <h2>A practical first 90 days.</h2>
+            <p class="muted">
+              We will focus on proof of value before scaling. The first phase is
+              about listening, delivering a small pilot, and sharing results
+              honestly.
+            </p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <div class="step-no">DAYS 01–30</div>
+              <h3>Establish the foundation</h3>
+              <p class="muted">
+                Consult young people and community stakeholders, recruit
+                founding volunteers, identify needs, and prepare simple
+                operating and safeguarding guidelines.
+              </p>
+            </article>
+            <article class="step">
+              <div class="step-no">DAYS 31–60</div>
+              <h3>Run the pilot</h3>
+              <p class="muted">
+                Invite a small first cohort, deliver an introductory digital
+                skills session, host a problem-solving activity, and connect
+                participants with available mentors.
+              </p>
+            </article>
+            <article class="step">
+              <div class="step-no">DAYS 61–90</div>
+              <h3>Show what we learn</h3>
+              <p class="muted">
+                Support practical projects, host a virtual showcase, publish a
+                short report, and use the evidence to improve the next phase and
+                approach partners.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="join" id="join">
+        <div class="wrap join-grid">
+          <div>
+            <div class="section-head">
+              <span class="kicker" style="color: #f6d879"
+                >Help shape the beginning</span
+              >
+              <h2>Good ideas grow when people build together.</h2>
+              <p>
+                YKI is in its founding stage. We welcome people who can
+                contribute time, knowledge, tools, thoughtful feedback, or
+                support toward a practical first pilot.
+              </p>
+            </div>
+            <div class="join-options">
+              <div class="join-option">
+                <strong>Volunteer</strong
+                ><span
+                  >Help with coordination, communications, design, research or
+                  programme delivery.</span
+                >
+              </div>
+              <div class="join-option">
+                <strong>Mentor or teach</strong
+                ><span
+                  >Share practical skills, guide a project, or support a
+                  learner's next step.</span
+                >
+              </div>
+              <div class="join-option">
+                <strong>Partner or support</strong
+                ><span
+                  >Explore equipment, data support, learning resources, project
+                  sponsorship or introductions.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-box">
+            <h3>Join the YKI community</h3>
+            <p>
+              Register your interest as a volunteer, mentor or partner using the
+              form below. Your response will be sent to the YKI team’s Google
+              Spreadsheet once the form connection is activated.
+            </p>
+            <form
+              id="volunteerForm"
+              class="volunteer-form"
+              method="post"
+              target="ykiFormFrame"
+              action="https://script.google.com/macros/s/AKfycbzSFTlPitNZgD48kA3i-b17C7vMBzM3id92YI5VBpDgPk4Nw6TeS0etAhnZZnkZNO8ndw/exec"
+            >
+              <label
+                >Full name
+                <input name="fullName" type="text" autocomplete="name" required
+              /></label>
+              <label
+                >Email address
+                <input name="email" type="email" autocomplete="email" required
+              /></label>
+              <label
+                >Phone / WhatsApp number
+                <input name="phone" type="tel" autocomplete="tel"
+              /></label>
+              <label
+                >Town / city and country
+                <input
+                  name="location"
+                  type="text"
+                  placeholder="e.g. Wukari, Nigeria"
+              /></label>
+              <label
+                >Age range
+                <select name="ageRange">
+                  <option value="">Select (optional)</option>
+                  <option>Under 18</option>
+                  <option>18–24</option>
+                  <option>25–30</option>
+                  <option>31 and above</option>
+                </select>
+              </label>
+              <fieldset>
+                <legend>
+                  How would you like to contribute?
+                  <span>(select all that apply)</span>
+                </legend>
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Founding team / coordination"
+                  />
+                  Founding team / coordination</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Digital skills training"
+                  />
+                  Digital skills training</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Coding / web development / AI"
+                  />
+                  Coding / web development / AI</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Graphic design / branding"
+                  />
+                  Graphic design / branding</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Communications / social media"
+                  />
+                  Communications / social media</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Research / community needs assessment"
+                  />
+                  Research / community needs assessment</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Mentorship / career guidance"
+                  />
+                  Mentorship / career guidance</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Entrepreneurship / business support"
+                  />
+                  Entrepreneurship / business support</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Kuteb language and cultural heritage"
+                  />
+                  Kuteb language and cultural heritage</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Fundraising / partnerships"
+                  />
+                  Fundraising / partnerships</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="Administration / finance"
+                  />
+                  Administration / finance</label
+                >
+                <label class="choice"
+                  ><input
+                    type="checkbox"
+                    name="contributions"
+                    value="General volunteering"
+                  />
+                  General volunteering</label
+                >
+              </fieldset>
+              <label
+                >Skills or experience you can contribute
+                <textarea name="skills" rows="3" required></textarea>
+              </label>
+              <label
+                >How much time can you offer?
+                <select name="availability" required>
+                  <option value="">Choose availability</option>
+                  <option>1–2 hours per week</option>
+                  <option>3–5 hours per week</option>
+                  <option>6+ hours per week</option>
+                  <option>Occasional support</option>
+                </select>
+              </label>
+              <label
+                >What would you like to help YKI achieve?
+                <textarea name="goals" rows="3"></textarea>
+              </label>
+              <label
+                >Portfolio / LinkedIn / GitHub link (optional)
+                <input name="portfolio" type="url" placeholder="https://"
+              /></label>
+              <label class="choice consent"
+                ><input type="checkbox" name="consent" value="Yes" required /> I
+                agree that YKI may use these details to review my interest and
+                contact me about YKI activities. I understand this is not a job
+                or funding offer.</label
+              >
+              <button class="btn primary" type="submit">
+                Submit registration <span aria-hidden="true">→</span>
+              </button>
+              <p
+                id="formStatus"
+                class="form-status"
+                role="status"
+                aria-live="polite"
+              >
+                Your information will be handled by authorised YKI
+                administrators.
+              </p>
+            </form>
+            <iframe
+              name="ykiFormFrame"
+              id="ykiFormFrame"
+              title="YKI registration submission"
+              hidden
+            ></iframe>
+            <div class="notice">
+              <strong>Prefer to contact us directly?</strong><br />Email:
+              <a href="mailto:youngkutebinnovators@gmail.com"
+                >youngkutebinnovators@gmail.com</a
+              ><br />WhatsApp community:
+              <a
+                href="https://chat.whatsapp.com/Dqjt51B35hyJAgSJKhlNSi"
+                target="_blank"
+                rel="noopener"
+                >Join the YKI WhatsApp group</a
+              >
+            </div>
+            <p class="muted" style="margin-top: 16px">
+              If you are under 18, please speak with a parent or guardian before
+              registering. YKI will establish appropriate safeguarding
+              arrangements before assigning activities to under-18s.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <strong>Young Kuteb Innovators (YKI)</strong><br /><small
+            >Our Heritage. Our Ideas. Our Future.</small
+          >
+        </div>
+        <small
+          >Independent • Youth-led • Digital-first<br />Founding-stage website
+          concept</small
+        >
+      </div>
+    </footer>
+    <script>
+      const volunteerForm = document.getElementById("volunteerForm");
+      const formFrame = document.getElementById("ykiFormFrame");
+      const formStatus = document.getElementById("formStatus");
+      let ykiSubmissionPending = false;
+      volunteerForm.addEventListener("submit", (event) => {
+        if (
+          volunteerForm.action.includes(
+            "https://script.google.com/macros/s/AKfycbzSFTlPitNZgD48kA3i-b17C7vMBzM3id92YI5VBpDgPk4Nw6TeS0etAhnZZnkZNO8ndw/exec",
+          )
+        ) {
+          event.preventDefault();
+          formStatus.textContent =
+            "The registration form is ready, but the Google Spreadsheet connection has not yet been activated. Follow the setup guide included in this website package.";
+          formStatus.style.color = "#9a5b00";
+          return;
+        }
+        ykiSubmissionPending = true;
+        formStatus.textContent = "Sending your registration…";
+      });
+      window.addEventListener("message", (event) => {
+        if (event.data === "YKI_FORM_SUCCESS") {
+          ykiSubmissionPending = false;
+          formStatus.textContent =
+            "Thank you! Your registration has been received by YKI.";
+          formStatus.style.color = "#176b3a";
+          volunteerForm.reset();
+        } else if (event.data === "YKI_FORM_ERROR") {
+          ykiSubmissionPending = false;
+          formStatus.textContent =
+            "We could not confirm your submission. Please email youngkutebinnovators@gmail.com.";
+          formStatus.style.color = "#9a3d2f";
+        }
+      });
+      const menuBtn = document.getElementById("menuBtn");
+      const navlinks = document.getElementById("navlinks");
+      menuBtn.addEventListener("click", () => {
+        const open = navlinks.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+      navlinks.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => {
+          navlinks.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
+        }),
+      );
+    </script>
+  </body>
+</html>
