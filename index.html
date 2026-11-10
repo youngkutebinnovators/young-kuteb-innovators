@@ -1153,21 +1153,13 @@
       const formFrame = document.getElementById("ykiFormFrame");
       const formStatus = document.getElementById("formStatus");
       let ykiSubmissionPending = false;
-      volunteerForm.addEventListener("submit", (event) => {
-        if (
-          volunteerForm.action.includes(
-            "https://script.google.com/macros/s/AKfycbzSFTlPitNZgD48kA3i-b17C7vMBzM3id92YI5VBpDgPk4Nw6TeS0etAhnZZnkZNO8ndw/exec",
-          )
-        ) {
-          event.preventDefault();
-          formStatus.textContent =
-            "The registration form is ready, but the Google Spreadsheet connection has not yet been activated. Follow the setup guide included in this website package.";
-          formStatus.style.color = "#9a5b00";
-          return;
-        }
-        ykiSubmissionPending = true;
-        formStatus.textContent = "Sending your registration…";
-      });
+      
+volunteerForm.addEventListener("submit", (event) => {
+  ykiSubmissionPending = true;
+  formStatus.textContent = "Sending your registration…";
+  formStatus.style.color = "#5e6e66";
+});
+
       window.addEventListener("message", (event) => {
         if (event.data === "YKI_FORM_SUCCESS") {
           ykiSubmissionPending = false;
